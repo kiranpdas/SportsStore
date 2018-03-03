@@ -21,7 +21,7 @@ namespace SportsStore
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(
             Configuration["Data:SportStoreProducts:ConnectionString"]));
-            services.AddTransient<IProductRepository, EFProductRepository>();
+        services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddMvc();
         }
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -30,6 +30,11 @@ namespace SportsStore
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvc(routes => {
+                routes.MapRoute(
+                name: "pagination",
+                template: "Products/Page{productPage}",
+                defaults: new { Controller = "Product", action = "List" });
+
                 routes.MapRoute(
                 name: "default",
                 template: "{controller=Product}/{action=List}/{id?}");
