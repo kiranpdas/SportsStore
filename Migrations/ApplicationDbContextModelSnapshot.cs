@@ -63,8 +63,11 @@ namespace SportsStore.Migrations
                     b.Property<string>("Name")
                         .IsRequired();
 
+<<<<<<< HEAD
                     b.Property<bool>("Shipped");
 
+=======
+>>>>>>> 37ac0541e52f433c08b128d85412a8822840b12c
                     b.Property<string>("State")
                         .IsRequired();
 

@@ -12,6 +12,7 @@ namespace SportsStore.Controllers
             repository = repoService;
             cart = cartService;
         }
+<<<<<<< HEAD
         public ViewResult List() => View(repository.Orders.Where(o => !o.Shipped));
         [HttpPost]
         public IActionResult MarkShipped(int orderID) {
@@ -26,6 +27,8 @@ namespace SportsStore.Controllers
 
 
 
+=======
+>>>>>>> 37ac0541e52f433c08b128d85412a8822840b12c
         public ViewResult Checkout() => View(new Order());
         [HttpPost]
         public IActionResult Checkout(Order order)

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "asp.net",
   "private": true,
   "dependencies": {
@@ -8,4 +9,12 @@
     "jquery-validation": "1.17.0",
     "jquery-validation-unobtrusive": "3.2.6"
   }
+=======
+    "name": "asp.net",
+    "private": true,
+    "dependencies": {
+        "bootstrap": "4.0.0-alpha.6",
+        "fontawesome": "4.7.0"
+    }
+>>>>>>> 37ac0541e52f433c08b128d85412a8822840b12c
 }
