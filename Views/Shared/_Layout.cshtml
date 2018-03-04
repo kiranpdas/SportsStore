@@ -10,12 +10,22 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <title>SportsStore</title>
 </head>
 <body>
-    <div class="navbar navbar-dark bg-dark" role="navigation">
-        <a class="navbar-brand" href="#">SPORTS STORE</a>
-    </div>
+    
+        <ul class="navbar navbar-dark bg-dark " role="navigation">
+            <li class="nav-item">
+                <a class=" navbar-brand" href="#">SPORTS STORE</a>
+            </li>
+            <li class="nav-item">
+                @await Component.InvokeAsync("CartSummary")
+            </li>
+
+        </ul>
+    
     <div class="row m-1 p-1">
         <div id="categories" class="col-3">
             @await Component.InvokeAsync("NavigationMenu")
